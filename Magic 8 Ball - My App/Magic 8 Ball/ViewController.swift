@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     
 
     @IBAction func typedAskButton(_ sender: Any) {
-        ballImageView.image = UIImage(named: "ball3")
         ballImageView.image = ballImages[Int.random(in: 0...4)]
     }
     

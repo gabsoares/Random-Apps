@@ -16,33 +16,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask me Anything..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkP-yf-GPg">
-                                <rect key="frame" x="44" y="164" width="326" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
-                                <color key="textColor" red="0.96078431372549022" green="0.94901960784313721" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-lB-n0R">
-                                <rect key="frame" x="87" y="297" width="240" height="249"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY6-Mn-IVw">
-                                <rect key="frame" x="141" y="647" width="132" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.17254901960784313" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Ask">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
-                                    <color key="baseForegroundColor" red="0.96078431372549022" green="0.94901960784313721" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="typedAskButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zel-6X-MPh"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="56w-ng-muJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1x-Nd-sss">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="267.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask me Anything..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkP-yf-GPg">
+                                                <rect key="frame" x="44.5" y="116" width="325.5" height="35"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="30"/>
+                                                <color key="textColor" red="0.96078431372549022" green="0.94901960784313721" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="SkP-yf-GPg" firstAttribute="centerX" secondItem="S1x-Nd-sss" secondAttribute="centerX" id="M7R-PY-7hy"/>
+                                            <constraint firstItem="SkP-yf-GPg" firstAttribute="centerY" secondItem="S1x-Nd-sss" secondAttribute="centerY" id="o8A-94-L4d"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVs-qa-Wvr">
+                                        <rect key="frame" x="0.0" y="275.5" width="414" height="267"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball1" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-lB-n0R">
+                                                <rect key="frame" x="107" y="48.5" width="200" height="170"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="170" id="RMl-Ov-Alk"/>
+                                                    <constraint firstAttribute="width" constant="200" id="qF3-gk-iY5"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="RZM-lB-n0R" firstAttribute="centerY" secondItem="kVs-qa-Wvr" secondAttribute="centerY" id="R4E-89-ok5"/>
+                                            <constraint firstItem="RZM-lB-n0R" firstAttribute="centerX" secondItem="kVs-qa-Wvr" secondAttribute="centerX" id="ZEp-3j-P1v"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rB-hT-NVG">
+                                        <rect key="frame" x="0.0" y="550.5" width="414" height="267.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY6-Mn-IVw">
+                                                <rect key="frame" x="152" y="109" width="110" height="50"/>
+                                                <color key="backgroundColor" red="0.17254901960784313" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="lje-6I-TpO"/>
+                                                    <constraint firstAttribute="height" constant="50" id="rlw-sN-oAM"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ask">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="baseForegroundColor" red="0.96078431372549022" green="0.94901960784313721" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="typedAskButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zel-6X-MPh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="LY6-Mn-IVw" firstAttribute="centerY" secondItem="7rB-hT-NVG" secondAttribute="centerY" id="ITg-eE-YH8"/>
+                                            <constraint firstItem="LY6-Mn-IVw" firstAttribute="centerX" secondItem="7rB-hT-NVG" secondAttribute="centerX" id="i7A-qS-Km4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.22352941176470587" green="0.35686274509803922" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="56w-ng-muJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ODj-HS-0UT"/>
+                            <constraint firstItem="56w-ng-muJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bCI-mn-w5D"/>
+                            <constraint firstItem="56w-ng-muJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lAI-4o-yie"/>
+                            <constraint firstItem="56w-ng-muJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tgx-bl-vDv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="ballImageView" destination="RZM-lB-n0R" id="cZw-Q6-0u7"/>
